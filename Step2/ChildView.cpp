@@ -75,6 +75,16 @@ void CChildView::OnPaint()
 	SolidBrush brush(Color(0, 0, 255));
 	graphics.FillRectangle(&brush, 100, 125, 400, 50);
 
+	FontFamily fontFamily(L"Arial");
+	Gdiplus::Font font(&fontFamily, 16);
+	
+	SolidBrush green(Color(0, 64, 0));
+	graphics.DrawString(L"CSE 335 rock!",  // String to draw
+		-1,         // String length, -1 means it figures it out on its own
+		&font,      // The font to use
+		PointF(10, 10),   // Where to draw (top left corner)
+		&green);    // The brush to draw the text with
+
 	// TODO: Add your message handler code here
 	
 	// Do not call CWnd::OnPaint() for painting messages
