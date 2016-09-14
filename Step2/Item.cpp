@@ -1,8 +1,17 @@
+/**
+ * \file Item.cpp
+ *
+ * \author Kaichen Xiao
+ */
+
 #include "stdafx.h"
 #include "Item.h"
 
 
-CItem::CItem()
+ /** Constructor
+ * \param aquarium The aquarium this item is a member of
+ */
+CItem::CItem(CAquarium *aquarium) : mAquarium(aquarium)
 {
 }
 
