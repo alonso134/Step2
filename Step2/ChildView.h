@@ -15,7 +15,7 @@
 
 
 #pragma once
-
+#include"Aquarium.h"
 
 // CChildView window
 
@@ -46,5 +46,9 @@ public:
 protected:
 	afx_msg void OnPaint();
 	DECLARE_MESSAGE_MAP()
+
+private:
+	/// An object that describes our aquarium.
+	CAquarium mAquarium;
 };
 
