@@ -17,6 +17,7 @@
 #pragma once
 #include"Aquarium.h"
 
+
 // CChildView window
 
 /**
@@ -50,5 +51,10 @@ protected:
 private:
 	/// An object that describes our aquarium.
 	CAquarium mAquarium;
+public:
+	afx_msg void OnAddfishBetafish();
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 };
 
