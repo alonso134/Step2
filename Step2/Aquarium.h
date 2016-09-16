@@ -22,6 +22,7 @@ public:
 
 	void OnDraw(Gdiplus::Graphics * graphics);
 	void Add(std::shared_ptr<CItem> item);
+	void Remove(std::shared_ptr<CItem> item);
 	std::shared_ptr<CItem> HitTest(int x, int y);
 private:
 	std::unique_ptr<Gdiplus::Bitmap> mBackground; ///< Background image to use

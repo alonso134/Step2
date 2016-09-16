@@ -38,6 +38,18 @@ namespace Testing
 
 			Assert::IsTrue(aquarium.HitTest(100, 200) == fish1,
 				L"Testing fish at 100, 200");
+
+			shared_ptr<CFishBeta> fish2 = make_shared<CFishBeta>(&aquarium);
+			fish2->SetLocation(100, 200);
+			aquarium.Add(fish2);
+
+			/// add the second 
+			Assert::IsTrue(aquarium.HitTest(100, 200) == fish2,
+				L"Testing top fish at 100, 200");
+
+			/// click somewhere else when there are fish were added in aquarium
+			Assert::IsTrue(aquarium.HitTest(300, 450) == nullptr,
+				L"Testing blank area");
 		}
 	};
 }

@@ -45,6 +45,18 @@
     <ClInclude Include="FishBeta.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DoubleBufferDC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpartyFish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AngelFish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KillerCarp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Step2.cpp">
@@ -66,6 +78,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FishBeta.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpartyFish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AngelFish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KillerCarp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

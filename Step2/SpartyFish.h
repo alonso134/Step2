@@ -1,28 +1,28 @@
 /**
- * \file FishBeta.h
+ * \file SpartyFish.h
  *
  * \author Kaichen Xiao
  *
- * Class that implements a Beta fish
+ * Class that implements a Sparty Fish
  */
 
 #pragma once
 #include "Item.h"
 #include <memory>
 /**
- * Implements a Beta fish
+ * Implementation for a Sparty Fish
  */
-class CFishBeta : public CItem
+class CSpartyFish : public CItem
 {
 public:
-	CFishBeta(CAquarium * aquarium);
+	CSpartyFish(CAquarium *aquarium);
 
-	/// Default constructor (disabled)
-	CFishBeta() = delete;
+	/// Default Constructor (Disabled)
+	CSpartyFish() = delete;
 	/// Copy constructor (disabled)
-	CFishBeta(const CFishBeta &) = delete;
+	CSpartyFish(const CSpartyFish &) = delete;
 	/// Destructor
-	virtual ~CFishBeta();
+	virtual ~CSpartyFish();
 	void Draw(Gdiplus::Graphics * graphics);
 
 	bool HitTest(int x, int y);

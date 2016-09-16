@@ -114,6 +114,9 @@ BEGIN
     POPUP "&Add Fish"
     BEGIN
         MENUITEM "&Beta Fish",                  ID_ADDFISH_BETAFISH
+        MENUITEM "&Sparty Fish",                ID_ADDFISH_SPARTYFISH
+        MENUITEM "&Angel Fish",                 ID_ADDFISH_ANGELFISH
+        MENUITEM "&Killer Carp",                ID_ADDFISH_KILLERCARP
     END
     POPUP "&Help"
     BEGIN

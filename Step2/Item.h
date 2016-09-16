@@ -3,14 +3,22 @@
  *
  * \author Kaichen Xiao
  *
- * CItem Class
+ * 
+ */
+
+/**
+ * \file Item.h
+ *
+ * \author Kaichen Xiao
+ *
+ * Class describles an item in the aquarium.
  */
 
 #pragma once
 class CAquarium;
 
 /**
- * 
+ * Implements an item in aquarium
  */
 class CItem
 {
@@ -45,7 +53,10 @@ public:
 	* \param y Y location on the aquarium to test
 	* \return true if clicked on */
 	virtual bool HitTest(int x, int y) = 0;
-
+	
+	
+	/// Determine this item can eat fish, return false by default.
+	virtual bool CanEatFish() { return false; };
 protected:
 	CItem(CAquarium *aquarium);
 

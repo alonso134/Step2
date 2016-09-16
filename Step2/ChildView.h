@@ -51,10 +51,17 @@ protected:
 private:
 	/// An object that describes our aquarium.
 	CAquarium mAquarium;
+
+	/// Any item we are currently dragging
+	std::shared_ptr<CItem> mGrabbedItem;
 public:
 	afx_msg void OnAddfishBetafish();
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	afx_msg void OnAddfishSpartyfish();
+	afx_msg void OnAddfishAngelfish();
+	afx_msg void OnAddfishKillercarp();
 };
 

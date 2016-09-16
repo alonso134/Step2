@@ -1,28 +1,28 @@
 /**
- * \file FishBeta.h
+ * \file AngelFish.h
  *
  * \author Kaichen Xiao
  *
- * Class that implements a Beta fish
+ * Class that implements a Angel Fish
  */
 
 #pragma once
 #include "Item.h"
 #include <memory>
 /**
- * Implements a Beta fish
+ * Implementation of Angel Fish
  */
-class CFishBeta : public CItem
+class CAngelFish : public CItem
 {
 public:
-	CFishBeta(CAquarium * aquarium);
+	CAngelFish(CAquarium * aquarium);
 
 	/// Default constructor (disabled)
-	CFishBeta() = delete;
+	CAngelFish() = delete;
 	/// Copy constructor (disabled)
-	CFishBeta(const CFishBeta &) = delete;
+	CAngelFish(const CAngelFish &) = delete;
 	/// Destructor
-	virtual ~CFishBeta();
+	virtual ~CAngelFish();
 	void Draw(Gdiplus::Graphics * graphics);
 
 	bool HitTest(int x, int y);

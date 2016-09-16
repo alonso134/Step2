@@ -1,32 +1,34 @@
 /**
- * \file FishBeta.h
+ * \file KillerCarp.h
  *
  * \author Kaichen Xiao
  *
- * Class that implements a Beta fish
+ * Class that implements a KILLER CARP
  */
 
 #pragma once
 #include "Item.h"
 #include <memory>
 /**
- * Implements a Beta fish
+ * Implementation of a Killer Carp
  */
-class CFishBeta : public CItem
+class CKillerCarp : public CItem
 {
 public:
-	CFishBeta(CAquarium * aquarium);
+	CKillerCarp(CAquarium * aquarium);
 
 	/// Default constructor (disabled)
-	CFishBeta() = delete;
+	CKillerCarp() = delete;
 	/// Copy constructor (disabled)
-	CFishBeta(const CFishBeta &) = delete;
+	CKillerCarp(const CKillerCarp &) = delete;
 	/// Destructor
-	virtual ~CFishBeta();
+	virtual ~CKillerCarp();
 	void Draw(Gdiplus::Graphics * graphics);
 
 	bool HitTest(int x, int y);
 
+	/// Determine this item can eat fish
+	bool CanEatFish() { return true; }
 private:
 	/// image object for fish
 	std::unique_ptr<Gdiplus::Bitmap> mFishImage;

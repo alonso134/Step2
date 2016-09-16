@@ -1,23 +1,23 @@
 /**
- * \file FishBeta.cpp
+ * \file AngelFish.cpp
  *
  * \author Kaichen Xiao
  */
 
 #include "stdafx.h"
-#include "FishBeta.h"
+#include "AngelFish.h"
 #include <string>
 
 using namespace std;
 using namespace Gdiplus;
 ///Fish filename
-const wstring FishBetaImageName(L"images/beta.png");
+const wstring FishBetaImageName(L"images/angelfish.png");
 
 /**
 * Constructor
 * \param aquarium Aquarium this fish is a member of
 */
-CFishBeta::CFishBeta(CAquarium *aquarium) : CItem(aquarium)
+CAngelFish::CAngelFish(CAquarium * aquarium) : CItem(aquarium)
 {
 	mFishImage = unique_ptr<Bitmap>(Bitmap::FromFile(FishBetaImageName.c_str()));
 	if (mFishImage->GetLastStatus() != Ok)
@@ -32,7 +32,7 @@ CFishBeta::CFishBeta(CAquarium *aquarium) : CItem(aquarium)
 /**
  * Destructor
  */
-CFishBeta::~CFishBeta()
+CAngelFish::~CAngelFish()
 {
 }
 
@@ -40,7 +40,7 @@ CFishBeta::~CFishBeta()
 * Draw this item
 * \param graphics Graphics device to draw on
 */
-void CFishBeta::Draw(Gdiplus::Graphics *graphics)
+void CAngelFish::Draw(Gdiplus::Graphics * graphics)
 {
 	double wid = mFishImage->GetWidth();
 	double hit = mFishImage->GetHeight();
@@ -55,7 +55,7 @@ void CFishBeta::Draw(Gdiplus::Graphics *graphics)
 * \param y Y position to test
 * \return true if hit.
 */
-bool CFishBeta::HitTest(int x, int y)
+bool CAngelFish::HitTest(int x, int y)
 {
 	double wid = mFishImage->GetWidth();
 	double hit = mFishImage->GetHeight();

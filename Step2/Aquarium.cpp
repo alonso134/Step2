@@ -5,6 +5,7 @@
  */
 
 #include "stdafx.h"
+#include <algorithm>
 #include "Aquarium.h"
 #include "FishBeta.h"
 
@@ -59,6 +60,19 @@ void CAquarium::OnDraw(Gdiplus::Graphics *graphics)
 void CAquarium::Add(std::shared_ptr<CItem> item)
 {
 	mItems.push_back(item);
+}
+
+/**
+ * Remove duplicate item when move item to the end of list
+ * \param item item which need to be removed except the last one
+ */
+void CAquarium::Remove(std::shared_ptr<CItem> item)
+{
+	auto loc = find(begin(mItems), end(mItems), item);
+	if (loc != end(mItems))
+	{
+		mItems.erase(loc);
+	}
 }
 
 /** Test an x,y click location to see if it clicked
